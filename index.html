@@ -46,5 +46,56 @@
 <h3 style="text-align:center;margin:3rem 0 1rem;font-size:clamp(1.2rem,2.5vw,1.7rem)">English Trailer</h3><div class="trailer-frame"><video controls playsinline preload="metadata" poster="social-preview.jpg"><source src="TRAPPED_IN_A_MANS_BODY_Trailer_ENGLISH_REPAIRED_FINAL.mp4" type="video/mp4">Your browser does not support HTML5 video. Please use the download button below.</video></div><div class="trailer-actions"><a href="TRAPPED_IN_A_MANS_BODY_Trailer_ENGLISH_REPAIRED_FINAL.mp4" download>Download English Trailer (MP4)</a><a href="https://www.amazon.com/dp/B0HJB7YWHV" target="_blank" rel="noopener">Get the book on Amazon</a></div></section>
 <section class="section coming" id="coming"><div class="section-label">04 / COMING NEXT</div><div class="coming-box"><p class="series">THE WILSON PUPPETS</p><h2>BOOK TWO</h2><p>The story continues.</p><span>Coming next</span></div></section>
 <section class="section contact" id="contact"><div class="section-label">05 / CONTACT</div><div class="section-content"><h2>Contact HARLAN HAWK.</h2><p>For author, publishing, and business inquiries:</p><p><a href="mailto:h.hawk1976@gmail.com">h.hawk1976@gmail.com</a></p><p><a href="https://www.instagram.com/trappedinmansbody/" target="_blank" rel="noopener noreferrer">Instagram — @trappedinmansbody</a></p></div></section>
-</main><footer><div>HARLAN HAWK</div><div>Stories beyond the obvious.</div><div>© 2026 HARLAN HAWK</div></footer>
-</body></html>
+```html
+</main>
+
+<footer>
+    <div>HARLAN HAWK</div>
+    <div>Stories beyond the obvious.</div>
+    <div>© 2026 HARLAN HAWK</div>
+
+    <!-- Public Visitor Counter -->
+    <div id="visitor-counter" style="
+        text-align: center;
+        padding: 24px 12px;
+        margin-top: 20px;
+        background: #080808;
+        border-top: 1px solid #5e4724;
+        color: #d6ad60;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        letter-spacing: 2px;
+    ">
+        <div style="margin-bottom: 12px;">TOTAL WEBSITE VISITS</div>
+        <div id="goatcounter-total"></div>
+    </div>
+
+    <script>
+    (function waitForGoatCounter() {
+        if (window.goatcounter && window.goatcounter.visit_count) {
+            window.goatcounter.visit_count({
+                append: '#goatcounter-total',
+                path: 'TOTAL',
+                style: `
+                    div {
+                        background: transparent;
+                        color: #d6ad60;
+                        border: none;
+                        padding: 0;
+                    }
+                    #gcvc-views {
+                        color: #f4f0e8;
+                        font-weight: bold;
+                    }
+                `
+            });
+        } else {
+            setTimeout(waitForGoatCounter, 100);
+        }
+    })();
+    </script>
+</footer>
+
+</body>
+</html>
+```
