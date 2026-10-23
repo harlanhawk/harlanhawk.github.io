@@ -314,32 +314,48 @@
     </div>
 
     <script>
-    (function waitForGoatCounter() {
-        if (window.goatcounter && window.goatcounter.visit_count) {
-            window.goatcounter.visit_count({
-                append: '#goatcounter-total',
-                path: 'TOTAL',
-                style: `
-                    div {
-                        background: #080808 !important;
-                        color: #d6ad60 !important;
-                        border: none !important;
-                        box-shadow: none !important;
-                    }
-                    a {
-                        color: #d6ad60 !important;
-                    }
-                    #gcvc-views {
-                        color: #f4f0e8 !important;
-                        font-weight: bold;
-                    }
-                `
-            });
-        } else {
-            setTimeout(waitForGoatCounter, 100);
-        }
-    })();
-    </script>
+    ```html
+<script>
+(function waitForGoatCounter() {
+    if (window.goatcounter && window.goatcounter.visit_count) {
+        window.goatcounter.visit_count({
+            append: '#goatcounter-total',
+            path: 'TOTAL',
+            no_branding: true,
+            attr: {
+                width: '200',
+                height: '60'
+            },
+            style: `
+                div {
+                    background-color: #080808 !important;
+                    color: #d6ad60 !important;
+                    border: 1px solid #5e4724 !important;
+                    box-shadow: none !important;
+                    padding: 10px !important;
+                    box-sizing: border-box !important;
+                }
+
+                #gcvc-for {
+                    color: #d6ad60 !important;
+                }
+
+                #gcvc-views {
+                    color: #f4f0e8 !important;
+                    font-weight: bold !important;
+                }
+
+                #gcvc-by {
+                    display: none !important;
+                }
+            `
+        });
+    } else {
+        setTimeout(waitForGoatCounter, 100);
+    }
+})();
+</script>
+
 </footer>
 
 </body>
